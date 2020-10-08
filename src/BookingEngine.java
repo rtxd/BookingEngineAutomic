@@ -5,9 +5,18 @@ public class BookingEngine {
         Tour tour2 = new Tour("BC", "Sydney Bridge Climb", 110);
         Tour tour3 = new Tour("SK", "Sydney Sky Tower", 30);
 
+
+        ShoppingCart cart = new ShoppingCart();
+        cart.add("OH");
+        cart.add("OH");
+        cart.add("OH");
+        cart.add("BC");
+
         System.out.println(tour1);
         System.out.println(tour2);
         System.out.println(tour3);
+
+        System.out.println(cart.getTotal());
 
 
     }
