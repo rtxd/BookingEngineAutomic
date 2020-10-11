@@ -11,10 +11,16 @@ public class ShoppingCart {
 
     public ShoppingCart(PromotionManager promotionalRules){
         this.promotionalRules = promotionalRules;
-        tourTypes.put("OH" ,new Tour("OH", "Opera House Tour", 300));
-        tourTypes.put("BC", new Tour("BC", "Sydney Bridge Climb", 110));
-        tourTypes.put("SK", new Tour("SK", "Sydney Sky Tower", 30));
     }
+
+    public ArrayList<String> getCartItems() {
+        return cart;
+    }
+
+    public void addTourType(Tour tourType){
+        tourTypes.put(tourType.getId(), tourType);
+    }
+
 
     public void add(String tour)
     {
@@ -26,6 +32,10 @@ public class ShoppingCart {
         cart.remove(tour);
     }
 
+    /**
+     * Get the total price of the cart after promotions have been applied
+     * @return cart value
+     */
     public float getTotal() {
         float totalPrice = 0;
         for(String tour : cart)
