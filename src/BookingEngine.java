@@ -6,7 +6,6 @@ public class BookingEngine {
         Tour tour3 = new Tour("SK", "Sydney Sky Tower", 30);
 
         PromotionManager promotionalRules = new PromotionManager();
-
         ShoppingCart cart = new ShoppingCart(promotionalRules);
         cart.add("OH");
         cart.add("BC");

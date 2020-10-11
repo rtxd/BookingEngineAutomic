@@ -33,6 +33,6 @@ public class ShoppingCart {
             totalPrice = totalPrice + tourTypes.get(tour).getPrice();
         }
 
-        return promotionalRules.applyAllPromotions(cart, totalPrice);
+        return promotionalRules.applyAllPromotions(cart, totalPrice, tourTypes);
     }
 }
