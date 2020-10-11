@@ -4,7 +4,7 @@ This project is an assignment to develop a shopping cart system with special dea
 * Give a free sky tower tour for every opera house tour sold.
 * The Sydney bridge climb will have a bulk discount applied, where the price will drop to $20 if someone buys more than four.
 
-##Assumptions
+## Assumptions
 * From the examples of the deals given, I'm making an assumption that the third deal drops the price of each Sydney bridge climb ticket *by* $20 instead of *to* $20
 * The customer only gets a Sydney Sky Tower ticket for free with their Opera House Tour if they add it to their cart. 
 
@@ -13,3 +13,7 @@ To setup and install download this project as a zip file or clone it to your com
 
 Once file is downloaded, open it in an IDE of your choosing.
 
+## How could this be improved with more time?
+ * I would have liked to make the promotional rules more flexible by being able to store and select which rules to apply to the cart.
+ * Isolating individual rules for testing 
+  
