@@ -7,8 +7,10 @@ public class ShoppingCart {
     private Map<String, Tour> tourTypes = new HashMap<String, Tour>();
     //    The shopping cart (stores tour IDs)
     private ArrayList<String> cart = new ArrayList<String>();
+    private PromotionManager promotionalRules;
 
-    public ShoppingCart(){
+    public ShoppingCart(PromotionManager promotionalRules){
+        this.promotionalRules = promotionalRules;
         tourTypes.put("OH" ,new Tour("OH", "Opera House Tour", 300));
         tourTypes.put("BC", new Tour("BC", "Sydney Bridge Climb", 110));
         tourTypes.put("SK", new Tour("SK", "Sydney Sky Tower", 30));
@@ -30,6 +32,7 @@ public class ShoppingCart {
         {
             totalPrice = totalPrice + tourTypes.get(tour).getPrice();
         }
-        return totalPrice;
+
+        return promotionalRules.applyAllPromotions(cart, totalPrice);
     }
 }

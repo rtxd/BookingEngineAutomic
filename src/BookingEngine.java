@@ -5,11 +5,14 @@ public class BookingEngine {
         Tour tour2 = new Tour("BC", "Sydney Bridge Climb", 110);
         Tour tour3 = new Tour("SK", "Sydney Sky Tower", 30);
 
+        PromotionManager promotionalRules = new PromotionManager();
 
-        ShoppingCart cart = new ShoppingCart();
+        ShoppingCart cart = new ShoppingCart(promotionalRules);
         cart.add("OH");
-        cart.add("OH");
-        cart.add("OH");
+        cart.add("BC");
+        cart.add("BC");
+        cart.add("BC");
+        cart.add("BC");
         cart.add("BC");
 
         System.out.println(tour1);
